@@ -20,4 +20,17 @@ For development, keep Recovery Model set to simple.
 
 ```Alt + X``` = run a script
 
+## Three Concepts 
+- **Tables**
+- **Views**
+- **Stored Procedures**
+
+---
+
+- **Tables**: Store information
+
+- **Views**: Combine information, easier to consume
+
+- **Stored Procedures**: Access and update information. Much more secure. 
+
 
