@@ -18,6 +18,6 @@ For development, keep Recovery Model set to simple.
 
 ```Ctrl + N``` = query window
 
-```Fn + F5``` = run a script
+```Alt + X``` = run a script
 
 
