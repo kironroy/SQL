@@ -8,4 +8,7 @@ Log File: Data goes here before going into actual database.
 - Over time, the file expands
 - Needs to be maintained
 
+For development, keep Recovery Model set to simple.
+
+
 
