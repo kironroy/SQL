@@ -1,6 +1,9 @@
 # SQL
 
+## Links
 🔗 [SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/)
+
+## Notes
 
 Log File: Data goes here before going into actual database. 
 
@@ -10,5 +13,11 @@ Log File: Data goes here before going into actual database.
 
 For development, keep Recovery Model set to simple.
 - Makes the application perform better, keep the file size down. 
+
+```Ctrl + R``` = open a run box
+
+```Ctrl + N``` = query window
+
+```Fn + F5``` = run a script
 
 
