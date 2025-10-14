@@ -27,9 +27,9 @@ For development, keep Recovery Model set to simple.
 
 ---
 
-- **Tables**: Store information
+- **Tables**: Store information.
 
-- **Views**: Combine information, easier to consume
+- **Views**: Combine information, easier to consume.
 
 - **Stored Procedures**: Access and update information. Much more secure. 
 
