@@ -63,7 +63,12 @@ For example if *Acme* company has 3 jobs and there id is 6, there will be 3 jobs
 
 We duplicated a number, not all the information.
 
-✔️ This is called a **one-to-many** relationship. One record in the ```customers table``` can link to many jobs (0 to more) records in the ```jobs table```. 
+✔️ 
+1. This is called a **one-to-many** relationship. One record in the ```customers table``` can link to many jobs (0 to more) records in the ```jobs table```. 
+
+2. Or one company can have multiple locations. ```customers table``` &#x2192; ```address table```. 
 
 ⚠️ Don't add too many columns. Creates problems. 
+
+## Inserting Data into Tables
 
