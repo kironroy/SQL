@@ -9,6 +9,6 @@ Log File: Data goes here before going into actual database.
 - Needs to be maintained
 
 For development, keep Recovery Model set to simple.
-
+- Makes the application perform better, keep the file size down. 
 
 
