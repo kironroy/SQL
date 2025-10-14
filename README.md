@@ -27,7 +27,12 @@ For development, keep Recovery Model set to simple.
 
 ---
 
-- **Tables**: Store information.
+- **Tables**: <u>Store information. Tables are where the data lives.</u>
+  - Everything else involves:  
+    - displaying data
+    - combing data 
+    - updating data 
+    - securing data
 
 - **Views**: Combine information, easier to consume.
 
