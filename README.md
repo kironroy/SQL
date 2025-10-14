@@ -65,3 +65,5 @@ We duplicated a number, not all the information.
 
 ✔️ This is called a **one-to-many** relationship. One record in the ```customers table``` can link to many jobs (0 to more) records in the ```jobs table```. 
 
+⚠️ Don't add too many columns. Creates problems. 
+
