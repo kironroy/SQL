@@ -30,7 +30,7 @@ For development, keep Recovery Model set to simple.
 - **Tables**: <u>Store information. Tables are where the data lives.</u>
   - Everything else involves:  
     - displaying data
-    - combing data 
+    - combining data 
     - updating data 
     - securing data
 
@@ -59,12 +59,12 @@ Set Identity Specification to Yes,
 
 ```Jobs table``` needs a certain ```id``` from  &#x2192; ```Customers table```
 
-For example if *Acme* company has 3 jobs and there id is 6, there will be 3 jobs in the ```Jobs table```. 
+For example if *Acme* company has 3 jobs and the id is 6, there will be 3 jobs in the ```Jobs table```. 
 
 We duplicated a number, not all the information.
 
 ✔️ 
-1. This is called a **one-to-many** relationship. One record in the ```customers table``` can link to many jobs (0 to more) records in the ```jobs table```. 
+1. This is called a **one-to-many** relationship. One record in the ```customers table``` can link to many jobs (1 to more) records in the ```jobs table```. 
 
 2. Or one company can have multiple locations. ```customers table``` &#x2192; ```address table```. 
 
@@ -72,7 +72,7 @@ We duplicated a number, not all the information.
 
 ## Inserting Data into Tables
 
-📝 Note: Ids can get out of order if you makr failed attempts at an entry. For example if you leave a field blank when no ```Nulls``` are allowed, SSM won't let you create a record.  
+📝 Note: Ids can get out of order if you make failed attempts at an entry. For example if you leave a field blank when no ```Nulls``` are allowed, SSM won't let you create a record.  
 
 **<u>However</u>**, the record is still created.  Don't worry about skipped numbers.  
 
