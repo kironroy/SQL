@@ -120,3 +120,102 @@ select * from dbo.Jobs;
 select * from dbo.Locations;
 
 ```
+
+## Queries 
+
+Select *
+```
+-- * displays all columns
+-- don't try to rely on *
+select * 
+from dbo.Employees
+
+
+```
+Asking for four columns
+
+``` 
+
+select FirstName, LastName, PayRate, BillRate
+from dbo.Employees
+
+```
+
+Order by
+
+```
+
+select FirstName, LastName, PayRate, BillRate
+from dbo.Employees
+
+-- order by, allows sorting data
+-- desc: descending -> z to a
+-- asc: ascending -> a to z, default 
+
+order by LastName asc
+
+```
+
+Where clause
+
+```
+select FirstName, LastName, PayRate, BillRate
+from dbo.Employees
+
+where PayRate > 200
+
+order by LastName desc, FirstName desc 
+
+```
+
+Wild Card %
+
+```
+
+
+select FirstName, LastName, PayRate, BillRate
+from dbo.Employees
+
+-- S and characters after S
+where LastName like'S%'
+
+order by LastName desc, FirstName desc 
+
+```
+
+Like 
+
+```
+select FirstName, LastName, PayRate, BillRate, EmailAddress
+from dbo.Employees
+
+where EmailAddress like'%.net'
+
+order by LastName desc, FirstName desc 
+
+```
+
+Join: Inner, Left, Right
+
+```
+
+
+
+-- c is used as an alias for  renaming  Customers table
+-- l is used as an alias for renaming Locations table
+
+select c.CompanyName, l.City
+from dbo.Customers c
+
+-- c.id = primary key = l.CustomerId
+
+inner join dbo.Locations l on c.id = l.CustomerId
+
+-- inner join: only the records that match 
+-- left join: all the records from the left table
+  -- and all the matching records from the right
+-- right join: all the records from the right table
+  -- and all the matching records from the left table
+
+
+```
