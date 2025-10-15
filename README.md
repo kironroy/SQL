@@ -72,3 +72,51 @@ We duplicated a number, not all the information.
 
 ## Inserting Data into Tables
 
+📝 Note: Ids can get out of order if you makr failed attempts at an entry. For example if you leave a field blank when no ```Nulls``` are allowed, SSM won't let you create a record.  
+
+**<u>However</u>**, the record is still created.  Don't worry about skipped numbers.  
+
+Insert with Query window 1 entry:
+
+```
+
+INSERT INTO dbo.Customers (
+    CompanyName,
+    PhoneNumber,
+    EmailAddress
+)
+VALUES (
+    'XYZ Corp',
+    '(512) 121-2121',
+    'hr2@xyz.org'
+);
+
+```
+
+Insert with Query window  multiple entries:
+```
+
+INSERT INTO dbo.Customers (CompanyName, PhoneNumber, EmailAddress)
+VALUES 
+  ('ACME Inc.', '215-3224', 'bugz8@acme.org'),
+  ('ABZ LLC.', '313-2333', 'abz@yahoo.com');
+
+```
+
+Insert with *
+```
+
+insert into dbo.WorkDone
+(EmployeeId, JobId, LocationId, HoursWorked, Description, DatePerformed)
+
+values(8, 1, 2, 7, 'Created front-end in React', '2/22/2025'),
+(9, 3, 3, 11, 'Mowed Lawn', '2/22/2024'),
+(7, 3, 2, 9, 'Mowed Lawn', '11/2/2023');
+
+-- * lookup, give me EVERY record from the Employees table and every column
+
+select * from dbo.Employees;
+select * from dbo.Jobs;
+select * from dbo.Locations;
+
+```
