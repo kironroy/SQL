@@ -256,3 +256,29 @@ inner join dbo.Customers c on j.CustomerId = c.id
 
 
 ```
+
+## Advanced Queries 
+
+```
+-- grouping data
+-- WorkedDone table is linked to the Jobs table by ids
+
+select w.*, c.CompanyName
+from dbo.WorkDone w
+
+-- joined Jobs table to the Workdone table
+-- inner join mean two tables have to have same entry to match
+
+inner join dbo.Jobs j on w.JobId = j.id
+inner join dbo.Customers c on j.CustomerId = c.id
+
+```
+
+| id  | EmployeeId | JobId | LocationId | HoursWorked | Description               | DatePerformed | CreateDate                  | LastUpdated                  | CompanyName          |
+|-----|------------|-------|------------|-------------|---------------------------|---------------|-----------------------------|------------------------------|----------------------|
+| 1   | 8          | 1     | 2          | 7           | Created front-end in React| 2025-02-22    | 2025-10-14 18:37:10.6866667 | 2025-10-14 18:37:10.6866667  | ACME Inc.            |
+| 2   | 9          | 3     | 3          | 5           | Mowed Lawn                | 2024-02-22    | 2025-10-14 18:37:10.6866667 | 2025-10-14 18:37:10.6866667  | Kiron Roy            |
+| 3   | 7          | 2     | 2          | 9           | Built first floor         | 2023-11-02    | 2025-10-14 18:37:10.6866667 | 2025-10-14 18:37:10.6866667  | ABZ LLC.             |
+| 8   | 10         | 4     | 4          | 1           | Gave Vini flu shot        | 2025-03-12    | 2025-10-14 18:57:06.5833333 | 2025-10-14 18:57:06.5833333  | Vini Gora LLC.       |
+| 14  | 11         | 5     | 7          | 5           | Sitar tuning              | 2022-05-06    | 2025-10-15 12:02:02.3666667 | 2025-10-15 12:02:02.3666667  | Chan & Daughters  |
+
