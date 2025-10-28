@@ -301,7 +301,7 @@ group by c.CompanyName
 |----------------------|------------|
 | ABZ LLC.             | 9          |
 | ACME Inc.            | 7          |
-| Kanchan & Daughters  | 22         |
+| Chan & Daughters  | 22         |
 | Kiron Roy            | 5          |
 | Vini Gora LLC.       | 1          |
 
