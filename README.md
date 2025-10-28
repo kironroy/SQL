@@ -331,3 +331,29 @@ order by CompanyName;
 | Kiron Roy            | Kiron     | 5          |
 | Vini Gora LLC.       | Rita      | 1          |
 
+
+
+```
+
+select c.CompanyName, e.FirstName, sum(w.HoursWorked) as 'Total Work'
+from dbo.WorkDone w
+
+inner join dbo.Jobs j on w.JobId = j.id
+inner join dbo.Customers c on j.CustomerId = c.id
+inner join dbo.Employees e on w.EmployeeId = e.id
+
+-- where acts about query before group
+-- where w.id != 28
+group by c.CompanyName, e.FirstName
+-- having works after grouping is donw
+having sum(w.HoursWorked) > 5
+order by CompanyName;
+
+```
+
+| CompanyName          | FirstName | Total Work |
+|----------------------|-----------|------------|
+| ABZ LLC.             | Sue       | 9          |
+| ACME Inc.            | Vini      | 7          |
+| Chan & Daughters  | Kav   | 22         |
+| Chan & Daughters  | Kiron     | 13         |
