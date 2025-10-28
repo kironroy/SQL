@@ -305,3 +305,24 @@ group by c.CompanyName
 | Kiron Roy            | 5          |
 | Vini Gora LLC.       | 1          |
 
+```
+
+-- group by company name & Employee who did the work, first name
+
+select c.CompanyName, e.FirstName, sum(w.HoursWorked) as 'Total Work'
+from dbo.WorkDone w
+
+inner join dbo.Jobs j on w.JobId = j.id
+inner join dbo.Customers c on j.CustomerId = c.id
+inner join dbo.Employees e on w.EmployeeId = e.id
+group by c.CompanyName, e.FirstName;
+
+```
+
+| CompanyName          | FirstName | Total Work |
+|----------------------|-----------|------------|
+| Chan & Daughters     | Kav       | 22         |
+| Kiron Roy            | Kiron     | 5          |
+| Vini Gora LLC.       | Rita      | 1          |
+| ABZ LLC.             | Sue       | 9          |
+| ACME Inc.            | Vini      | 7          |
