@@ -6,6 +6,8 @@
 
 ## Notes
 
+⚠️[SQL Server Management Studio SSMS tries to "save to file" instead of execute on F5](https://stackoverflow.com/questions/1227614/sql-server-management-studio-ssms-tries-to-save-to-file-instead-of-execute-on)
+
 Log File: Data goes here before going into actual database.
 
 - Log file acts as a backup
