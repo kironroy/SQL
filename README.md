@@ -282,3 +282,26 @@ inner join dbo.Customers c on j.CustomerId = c.id
 | 8   | 10         | 4     | 4          | 1           | Gave Vini flu shot        | 2025-03-12    | 2025-10-14 18:57:06.5833333 | 2025-10-14 18:57:06.5833333  | Vini Gora LLC.       |
 | 14  | 11         | 5     | 7          | 5           | Sitar tuning              | 2022-05-06    | 2025-10-15 12:02:02.3666667 | 2025-10-15 12:02:02.3666667  | Chan & Daughters  |
 
+
+
+```
+
+-- group by company name
+
+select c.CompanyName, sum(w.HoursWorked) as 'Total Work'
+from dbo.WorkDone w
+
+inner join dbo.Jobs j on w.JobId = j.id
+inner join dbo.Customers c on j.CustomerId = c.id
+group by c.CompanyName
+
+```
+
+| CompanyName          | Total Work |
+|----------------------|------------|
+| ABZ LLC.             | 9          |
+| ACME Inc.            | 7          |
+| Kanchan & Daughters  | 22         |
+| Kiron Roy            | 5          |
+| Vini Gora LLC.       | 1          |
+
