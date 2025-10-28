@@ -357,3 +357,35 @@ order by CompanyName;
 | ACME Inc.            | Vini      | 7          |
 | Chan & Daughters  | Kav   | 22         |
 | Chan & Daughters  | Kiron     | 13         |
+
+
+```
+
+select c.CompanyName
+, e.FirstName
+, sum(w.HoursWorked) as 'Total Work'
+, count(1) as 'Number of Entries'
+, min(w.HoursWorked) as 'Minimum'
+, max(w.HoursWorked) as 'Maxium'
+, avg(w.HoursWorked) as 'Average'
+from dbo.WorkDone w
+
+inner join dbo.Jobs j on w.JobId = j.id
+inner join dbo.Customers c on j.CustomerId = c.id
+inner join dbo.Employees e on w.EmployeeId = e.id
+
+-- where acts about query before group
+-- where w.id != 28
+group by c.CompanyName, e.FirstName
+-- having works after grouping is donw
+having sum(w.HoursWorked) > 5
+order by CompanyName;
+
+```
+
+| CompanyName          | FirstName | Total Work | Number of Entries | Minimum | Maximum | Average |
+|----------------------|-----------|------------|--------------------|---------|---------|---------|
+| ABZ LLC.             | Sue       | 9          | 1                  | 9       | 9       | 9       |
+| ACME Inc.            | Vini      | 7          | 1                  | 7       | 7       | 7       |
+| Chan & Daughters  | Kav    | 22         | 3                  | 5       | 12      | 7       |
+| Chan & Daughters  | Kiron     | 13         | 1                  | 13      | 13      | 13      |
