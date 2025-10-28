@@ -259,6 +259,29 @@ inner join dbo.Customers c on j.CustomerId = c.id
 
 ## Advanced Queries 
 
+## Query Order of Operations
+
+1. WHERE - Filters records before any grouping 
+  - Acts on individual rows
+  - Reduces data set before grouping
+  - Example: `WHERE PayRate > 200`
+
+2. GROUP BY - Groups filtered records into sets
+  - Combines rows with matching values
+  - Required when using aggregate functions with non-aggregated columns
+  - Example: `GROUP BY CompanyName, FirstName`
+
+3. HAVING - Filters after grouping is done
+  - Acts on grouped results
+  - Filters based on aggregate values
+  - Example: `HAVING SUM(HoursWorked) > 5`
+
+4. ORDER BY - Sorts final results
+  - Always comes last
+  - Can sort by multiple columns
+  - Example: `ORDER BY CompanyName ASC`
+
+
 ```
 -- grouping data
 -- WorkedDone table is linked to the Jobs table by ids
